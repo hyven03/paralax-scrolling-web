@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(rgb(102, 244, 102), rgb(27, 136, 27));
+
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  padding: 35px 80px;
+
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 10000;
+}
+
+header #Name {
+  border-radius: 5px;
+  background-color: aliceblue;
+  color: rgb(1, 64, 16);
+  padding: 8px 10px;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 36px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  margin-left: 20px;
+  font-size: 20px;
+}
+header ul li a {
+  color: whitesmoke;
+  border: 2px solid transparent;
+
+  text-decoration: none;
+  padding: 8px 15px;
+}
+.Active {
+  border-radius: 20px;
+  border: 2px solid whitesmoke;
+
+  background-color: white;
+  color: rgb(36, 112, 1);
+}
+
+header ul li a:hover {
+  border-radius: 20px;
+  border: 2px solid whitesmoke;
+
+  background-color: white;
+  color: rgb(36, 112, 1);
+}
+
+section {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+}
+section::before {
+  content: "";
+  position: absolute;
+
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+
+  background: linear-gradient(to top, rgb(27, 136, 27), transparent);
+  z-index: 1000;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section img#moon {
+  mix-blend-mode: screen;
+}
+section img#mountains_front {
+  z-index: 10;
+}
+
+#Fullname {
+  position: absolute;
+  right: -300px;
+  white-space: nowrap;
+  color: rgb(168, 240, 155);
+  font-size: 7vw;
+
+  z-index: 9;
+}
+
+#Info {
+  text-decoration: none;
+  display: inline-block;
+
+  background-color: wheat;
+  color: rgb(5, 145, 28);
+
+  border-radius: 40px;
+  padding: 10px 24px;
+  z-index: 9;
+  transform: translateY(100px);
+}
+
+#content {
+  position: relative;
+  padding: 100px;
+  background-color: green;
+}
+
+#content h2 {
+  font-size: 36px;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+#content p {
+  font-size: 18px;
+  color: whitesmoke;
+  font-weight: 400;
+}
