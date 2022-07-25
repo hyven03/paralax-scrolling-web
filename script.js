@@ -1,18 +1,22 @@
-let stars = document.getElementById("stars");
-let moon = document.getElementById("moon");
-let mountains_behind = document.getElementById("mountains_behind");
-let Fullname = document.getElementById("Fullname");
-let Info = document.getElementById("Info");
-let mountains_front = document.getElementById("mountains_front");
-let header = document.querySelector("header");
+const stars = document.getElementById("stars");
+const moon = document.getElementById("moon");
+const mountains_behind = document.getElementById("mountains_behind");
+const fullname = document.getElementById("fullname");
+const info = document.getElementById("info");
+const mountains_front = document.getElementById("mountains_front");
+const header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
-  let value = window.scrollY;
+  const value = window.scrollY;
+
   stars.style.left = value * 0.25 + "px";
   moon.style.top = value * 1 + "px";
+
   mountains_behind.style.top = value * 0.5 + "px";
   mountains_front.style.top = value * 0 + "px";
-  Fullname.style.marginRight = value * 4 + "px";
-  Fullname.style.marginTop = value * 1 + "px";
+
+  fullname.style.marginRight = value * 4 + "px";
+  fullname.style.marginTop = value * 1 + "px";
+
   header.style.marginTop = value * 0.2 + "px";
 });
